@@ -11,6 +11,14 @@
     
 	<div>
 		<script>
+			$(document).ready(function(){
+				$.ajax({
+					type : "GET",
+					url : "https://api.coinone.co.kr/ticker/",
+					dataType : "JSON",
+				})
+			)}
+					  
 			setInterval(function(){  $.ajax({
 				type : "GET",
 				url : "https://api.coinone.co.kr/ticker/",
