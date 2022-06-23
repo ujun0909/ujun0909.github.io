@@ -9,6 +9,33 @@
 <h2>웹사이트에 방문해 주셔서 감사합니다.</h2>
     
     
+    
+<div>
+setInterval(function(){  $.ajax({
+        type : "GET",
+        url : "https://api.coinone.co.kr/ticker/",
+        dataType : "JSON",
+        error : function(error){
+          console.log(error)
+        },
+        data:{
+          currency:"all"
+        },
+        sucess : function(data){
+          $("btc").html(data.btc.last)
+          $("xrp").html(data.xrp.last)
+          $("eth").html(data.eth.last)
+          $("bch").html(data.bch.last)
+          $("etc").html(data.etc.last)
+          $("ltc").html(data.ltc.last)
+        }
+      })},400)
+})
+    
+</div>
+	
+    
+    
 <div style="float:left">
     
 <!-- TradingView Widget BEGIN -->
@@ -100,5 +127,8 @@
 <script  src="./script.js"></script>
 </div>
 
+	
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </body>
 </html>
