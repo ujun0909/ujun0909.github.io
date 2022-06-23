@@ -5,13 +5,13 @@
     <title>Hello</title>
 </head>
 <body>
-<h1>안녕하세요.</h1>
-<h2>웹사이트에 방문해 주셔서 감사합니다.</h2>
+	<h1>안녕하세요.</h1>
+	<h2>웹사이트에 방문해 주셔서 감사합니다.</h2>
     
     
     
-<div>
-$setInterval(function(){  $.ajax({
+	<div>
+	$setInterval(function(){  $.ajax({
         type : "GET",
         url : "https://api.coinone.co.kr/ticker/",
         dataType : "JSON",
@@ -30,106 +30,105 @@ $setInterval(function(){  $.ajax({
           $("ltc").html(data.ltc.last)
         }
       })},400)
-})
+	})
     
-</div>
+	</div>
 	
     
     
-<div style="float:left">
-    
-<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div id="tradingview_5d908"></div>
-  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/BTC/" rel="noopener" target="_blank"><span class="blue-text">BTC Chart</span></a> by TradingView</div>
-  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-  <script type="text/javascript">
-  new TradingView.widget(
-  {
-  "height": 500,
-  "symbol": "BTC",
-  "interval": "D",
-  "timezone": "Etc/UTC",
-  "theme": "light",
-  "style": "1",
-  "locale": "en",
-  "toolbar_bg": "#f1f3f6",
-  "enable_publishing": false,
-  "allow_symbol_change": true,
-  "container_id": "tradingview_5d908"
-}
-  );
-  </script>
-</div>
-<!-- TradingView Widget END -->
+	<div style="float:left">
 
-<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div id="tradingview_b195a"></div>
-  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/KRX-005930/" rel="noopener" target="_blank"><span class="blue-text">005930 Chart</span></a> by TradingView</div>
-  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-  <script type="text/javascript">
-  new TradingView.widget(
-  {
-  "height": 500,
-  "symbol": "KRX:005930",
-  "interval": "D",
-  "timezone": "Etc/UTC",
-  "theme": "light",
-  "style": "1",
-  "locale": "en",
-  "toolbar_bg": "#f1f3f6",
-  "enable_publishing": false,
-  "allow_symbol_change": true,
-  "container_id": "tradingview_b195a"
-}
-  );
-  </script>
-</div>
-<!-- TradingView Widget END -->
+	<!-- TradingView Widget BEGIN -->
+	<div class="tradingview-widget-container">
+	  <div id="tradingview_5d908"></div>
+	  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/BTC/" rel="noopener" target="_blank"><span class="blue-text">BTC Chart</span></a> by TradingView</div>
+	  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+	  <script type="text/javascript">
+	  new TradingView.widget(
+	  {
+	  "height": 500,
+	  "symbol": "BTC",
+	  "interval": "D",
+	  "timezone": "Etc/UTC",
+	  "theme": "light",
+	  "style": "1",
+	  "locale": "en",
+	  "toolbar_bg": "#f1f3f6",
+	  "enable_publishing": false,
+	  "allow_symbol_change": true,
+	  "container_id": "tradingview_5d908"
+	}
+	  );
+	  </script>
+	</div>
+	<!-- TradingView Widget END -->
 
-<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div id="tradingview_6014e"></div>
-  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/KRWUSD/?exchange=FX_IDC" rel="noopener" target="_blank"><span class="blue-text">KRWUSD Chart</span></a> by TradingView</div>
-  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-  <script type="text/javascript">
-  new TradingView.widget(
-  {
-  "height": 500,
-  "symbol": "FX_IDC:KRWUSD",
-  "interval": "D",
-  "timezone": "Etc/UTC",
-  "theme": "light",
-  "style": "1",
-  "locale": "en",
-  "toolbar_bg": "#f1f3f6",
-  "enable_publishing": false,
-  "allow_symbol_change": true,
-  "container_id": "tradingview_6014e"
-}
-  );
-  </script>
-</div>
-<!-- TradingView Widget END -->
-    
-</div>
-    
-<div style="float:right">
-    <div> <img src="https://i.ytimg.com/vi/YppG0qqtntI/maxresdefault.jpg" widht="500" height="300"> </div>
-    
-</div>
-    
-   
-<div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-<canvas id="line-chart" width="300" height="250">
-<script src="./script.js"></script>
-</canvas>
-</div>
+	<!-- TradingView Widget BEGIN -->
+	<div class="tradingview-widget-container">
+	  <div id="tradingview_b195a"></div>
+	  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/KRX-005930/" rel="noopener" target="_blank"><span class="blue-text">005930 Chart</span></a> by TradingView</div>
+	  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+	  <script type="text/javascript">
+	  new TradingView.widget(
+	  {
+	  "height": 500,
+	  "symbol": "KRX:005930",
+	  "interval": "D",
+	  "timezone": "Etc/UTC",
+	  "theme": "light",
+	  "style": "1",
+	  "locale": "en",
+	  "toolbar_bg": "#f1f3f6",
+	  "enable_publishing": false,
+	  "allow_symbol_change": true,
+	  "container_id": "tradingview_b195a"
+	}
+	  );
+	  </script>
+	</div>
+	<!-- TradingView Widget END -->
 
-	
-	
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- TradingView Widget BEGIN -->
+	<div class="tradingview-widget-container">
+	  <div id="tradingview_6014e"></div>
+	  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/KRWUSD/?exchange=FX_IDC" rel="noopener" target="_blank"><span class="blue-text">KRWUSD Chart</span></a> by TradingView</div>
+	  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+	  <script type="text/javascript">
+	  new TradingView.widget(
+	  {
+	  "height": 500,
+	  "symbol": "FX_IDC:KRWUSD",
+	  "interval": "D",
+	  "timezone": "Etc/UTC",
+	  "theme": "light",
+	  "style": "1",
+	  "locale": "en",
+	  "toolbar_bg": "#f1f3f6",
+	  "enable_publishing": false,
+	  "allow_symbol_change": true,
+	  "container_id": "tradingview_6014e"
+	}
+	  );
+	  </script>
+	</div>
+	<!-- TradingView Widget END -->
+
+	</div>
+
+	<div style="float:right">
+		<div> <img src="https://i.ytimg.com/vi/YppG0qqtntI/maxresdefault.jpg" widht="500" height="300"> </div>
+
+	</div>
+
+
+	<div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+	<canvas id="line-chart" width="300" height="250">
+	<script src="./script.js"></script>
+	</canvas>
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </body>
 </html>
