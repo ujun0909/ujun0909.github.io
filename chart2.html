@@ -8,14 +8,7 @@
 		<div id="container" style="height: 400px; min-width: 310px"></div>
 		<script>
 			var chartdata = [];
-			function load3(){
-				$.getJSON('https://poloniex.com/public?command=returnChartData&currencyPair=USDT_BTC&start=1455699200&end=9999999999&period=14400', function (data) {
-					$.each(data, function(i, item){
-						chartdata.push([item.date*1000, item.open, item.high, item.low, item.close]);
-					});
-				}).done(function(){
-					draw3();
-				});
+
 			function draw3(){
 				Highcharts.stockChart('container',{
 					title: {
@@ -47,6 +40,17 @@
 					}]
 				});
 			}
+			
+			function load3(){
+				$.getJSON('https://poloniex.com/public?command=returnChartData&currencyPair=USDT_BTC&start=1455699200&end=9999999999&period=14400', function (data) {
+					$.each(data, function(i, item){
+						chartdata.push([item.date*1000, item.open, item.high, item.low, item.close]);
+					});
+				}).done(function(){
+					draw3();
+				});
+			}
+			
 			load3();
 		</script>
 	</body>
