@@ -7,7 +7,8 @@
 	<body>
 		<div id="container" style="height: 400px; min-width: 310px"></div>
 		<script>
-			var chartdata[0] = [];
+			var chartdata = [];
+			chartdata[0] = [];
 			function load3(){
 				$.getJSON('https://poloniex.com/public?command=returnChartData&currencyPair=USDT_BTC&start=1455699200&end=9999999999&period=14400', function (data) {
 					$.each(data, function(i, item){
