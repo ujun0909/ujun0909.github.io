@@ -6,7 +6,23 @@
 </head>
 <body>
 	<h1>안녕하세요.</h1>
-	<h2>웹사이트에 방문해 주셔서 감사합니다.</h2>
+	<h2>웹사이트에 방문해 주셔서 감사한지는 잘 모르겠습니다.</h2>
+    
+    
+    <div style="font-size=: 4.0em">
+		<!--
+		<select id="location" style="font-size:2.0em;">
+			<option value="postech">Postech</option>
+			<option value="lmu">LMU</option>
+		</select>
+		-->
+		
+		<button onclick="clicked_lmu()" style="font-size:1.5em;">LMU 뭐먹지</button> 
+		<button onclick="clicked_postech()" style="font-size:1.5em;">POSTECH 뭐먹지</button> <br>
+		<textarea id="output" style="font-size:2.0em;"></textarea>
+		<br></br><br></br>
+    
+    </div>
     
     
     
@@ -20,7 +36,7 @@
 	  <script type="text/javascript">
 	  new TradingView.widget(
 	  {
-	  "height": 500,
+	  "width": 700,
 	  "symbol": "BTC",
 	  "interval": "D",
 	  "timezone": "Etc/UTC",
@@ -45,7 +61,7 @@
 	  <script type="text/javascript">
 	  new TradingView.widget(
 	  {
-	  "height": 500,
+	  "width": 700,
 	  "symbol": "KRX:005930",
 	  "interval": "D",
 	  "timezone": "Etc/UTC",
@@ -70,7 +86,7 @@
 	  <script type="text/javascript">
 	  new TradingView.widget(
 	  {
-	  "height": 500,
+	  "width": 700,
 	  "symbol": "FX_IDC:KRWUSD",
 	  "interval": "D",
 	  "timezone": "Etc/UTC",
@@ -90,8 +106,10 @@
 	</div>
 
 	<div style="float:right">
-		<div> <img src="https://i.ytimg.com/vi/YppG0qqtntI/maxresdefault.jpg" widht="500" height="300"> </div>
-
+		<div> <img src="https://i.ytimg.com/vi/YppG0qqtntI/maxresdefault.jpg" width="500"> </div>
+        <div> <img src="https://github.com/ujun0909/ujun0909.github.io/blob/main/maxresdefault.jpg?raw=true" width="500"> </div>
+        <div> <img src="https://github.com/ujun0909/ujun0909.github.io/blob/main/D6UJcVsUYAESiE_.jpg?raw=true" width="400"> </div>
+        <div> <img src="https://github.com/ujun0909/ujun0909.github.io/blob/main/08818e2d5b2363c6c4899fc48c1d2a34.jpg?raw=true" width="400"> </div>
 	</div>
 
 
@@ -104,5 +122,39 @@
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	
+    <script>
+		var foods_postech = ["RIST", "학식", "돈까스", "초밥", "돼지국밥"];
+		var foods_lmu = ["되너", "팔라펠", "피자", "베트남쌀국수", "파키스탄식커리", "샌드위치", "학식", "Korean"];
+		
+		function clicked_postech(){
+			var selected_location = "postech";
+			output(selected_location);
+		}
+		function clicked_lmu(){
+			var selected_location = "lmu";
+			output(selected_location);
+		}
+
+		function output(selected_location){
+			var foods = ["흠"];
+			/*
+			var select = document.getElementById("location");
+			var selected_location = [...select.options]
+									.filter(option => option.selected)
+									.map(option => option.value);
+			*/
+			if(selected_location=="postech") {
+				var foods = foods_postech;
+			} else if (selected_location=="lmu") {
+				var foods = foods_lmu;
+			}
+			var num_foods = foods.length;
+			var idx = Math.floor(Math.random()*num_foods)
+			var selected = foods[idx];
+			document.getElementById("output").value = selected;
+		}
+    </script>
 </body>
 </html>
